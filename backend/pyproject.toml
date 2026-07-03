@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+# F821 is disabled because SQLAlchemy Mapped[] relationships legitimately
+# use forward-reference string type hints resolved later by the mapper.
+ignore = ["E501", "F821"]
+
+[tool.black]
+line-length = 110
+target-version = ["py312"]
